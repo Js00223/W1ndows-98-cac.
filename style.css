@@ -11,7 +11,7 @@ body {
 .window {
     background-color: #c0c0c0;
     border: 2px solid #000;
-    width: 220px;
+    width: 240px;
     padding: 5px;
     box-shadow: 4px 4px #404040;
 }
@@ -28,13 +28,18 @@ body {
     height: 40px;
     margin-bottom: 5px;
     text-align: right;
-    padding: 5px;
+    padding: 10px;
     font-size: 18px;
+    border: 1px solid #808080;
+    background-color: white;
+    box-sizing: border-box; /* 부모 크기 초과 방지 */
+    overflow: visible; /* 넘치는 내용 숨김 */
 }
 
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2px;
 }
 
@@ -44,6 +49,13 @@ button {
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
+    flex: 1 1 22%;
+    max-width: 22%;
+}
+
+.zero {
+    flex-grow: 100;
+    max-width: 48%;
 }
 
 button:active {

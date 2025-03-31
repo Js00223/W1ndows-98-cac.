@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows 98 스타일 계산기</title>
+    <title>Windows 98 Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="display" class="display" value="0" readonly>
-        <div class="buttons">
-            <button class="number">7</button>
-            <button class="number">8</button>
-            <button class="number">9</button>
-            <button class="operator">/</button>
-            <button class="number">4</button>
-            <button class="number">5</button>
-            <button class="number">6</button>
-            <button class="operator">*</button>
-            <button class="number">1</button>
-            <button class="number">2</button>
-            <button class="number">3</button>
-            <button class="operator">-</button>
-            <button class="number">0</button>
-            <button>.</button>
-            <button id="clear">C</button>
-            <button class="operator">+</button>
-            <button id="equals">=</button>
+    <div class="window">
+        <div class="title-bar">Calculator - Windows 98</div>
+        <div class="calculator">
+            <input type="text" class="display" id="display" value="0" disabled>
+            <div class="buttons">
+                <button class="number" onclick="pressKey('7')">7</button>
+                <button class="number" onclick="pressKey('8')">8</button>
+                <button class="number" onclick="pressKey('9')">9</button>
+                <button onclick="pressKey('/')">/</button>
+                <button class="number" onclick="pressKey('4')">4</button>
+                <button class="number" onclick="pressKey('5')">5</button>
+                <button class="number" onclick="pressKey('6')">6</button>
+                <button onclick="pressKey('*')">*</button>
+                <button class="number" onclick="pressKey('1')">1</button>
+                <button class="number" onclick="pressKey('2')">2</button>
+                <button class="number" onclick="pressKey('3')">3</button>
+                <button onclick="pressKey('-')">-</button>
+                <button class="number" onclick="pressKey('0')">0</button>
+                <button onclick="pressKey('.')">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="pressKey('+')" id="plus-btn">+</button>
+                <button onclick="clearDisplay()">C</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
